@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your order</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Oswald&display=swap" rel="stylesheet">
+    <link href="../static/css/cart.css" type="text/css" rel="stylesheet">
+    <link rel="icon" href="../static/images/cart-icon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <div class="wrapper">
+        <div class="top-bar">
+            <img class="logo" src="../static/images/logo.png" alt="where's mr pizza" height="60" width="60">
+            <div class="MainName">Mario & Luigi Pizza</div>
+        </div>
+
+        <div class="container">
+            <h1>Your order:</h1>
+            
+            {% for item in cart_items %}
+            <div class="row">
+                <span>${{ item['price'] }}</span><span>{{ item['name'] }} {{ '- ' + item['size'][0].upper() if item.get('size') else '' }}</span><span id="{{ item['id'] }}" class="material-symbols-outlined del-btn">
+                    delete
+                    </span>
+            </div>
+            {% endfor %}
+            
+            <div class="line"></div>
+            <h3>Total price: ${{ total_price }}</h3>
+
+
+            <button class="pay-btn">Pay</button>
+            <button class="cancel-btn">Cancel</button>
+
+        </div>
+    </div>
+
+    <script>
+        let payBtn = document.querySelector('.pay-btn');
+        let cancelBt = document.querySelector('.cancel-btn');
+        let delBtn = document.querySelector('.del-btn');
+
+        payBtn.addEventListener('click', () => window.location.replace('/finish-order'));
+        cancelBt.addEventListener('click', () => window.location.replace('/menu'));
+        delBtn.addEventListener('click', () => window.location.replace('/remove-from-cart/' + delBtn.id));
+    </script>
+</body>
+</html>

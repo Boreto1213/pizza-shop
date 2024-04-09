@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Oswald&display=swap" rel="stylesheet">
+    <link href="../static/css/second-page.css" type="text/css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../static/images/logo.jpeg">
+</head>
+<body>
+    <body>
+        <div class="logo"><img src="../static/images/logo.png" alt="where's mr pizza" height="60" width="60"></div>
+        <div class="MainName">Mario & Luigi Pizza</div>
+        <img class="cart-btn" src="../static/images/cart-icon.png" alt="where's the cart?" height="30px" width="30px">
+
+        <div class="container">
+            <div class = "card">
+                <img src="{{ most_popular['img'] }}" alt="margarita" class="pizza">
+                <h1>Most popular!</h1>
+                <h5>{{ most_popular['name'] }}</h5>
+                <p class="price">${{ most_popular['medium_price'] }}</p>
+                <p><button class="buy-now-btn btn1">BUY NOW!</button></p>
+                </div>
+            <div class = "card">
+               <img src="{{ newest['img'] }}" alt="hawaiian" class="pizza">
+                <h1>New!</h1>
+                <h5>{{ newest['name'] }}</h5>
+                <p class="price">${{ newest['medium_price'] }}</p>
+                <p><button class="buy-now-btn btn2">BUY NOW!</button></p>
+            </div>
+        </div>
+             <button class="button button1" id="rcorners1">Menu</button>
+             
+
+             <script>
+                let cartBtn = document.querySelector('.cart-btn');
+                let menuBtn = document.querySelector('.button1');
+                let btn1 = document.querySelector('.btn1');
+                let btn2 = document.querySelector('.btn2');
+
+                cartBtn.addEventListener('click', () => window.location.replace('/cart'));
+                menuBtn.addEventListener('click', () => window.location.replace('/menu'));
+                btn1.addEventListener('click', () => window.location.replace('details/1'))
+                btn2.addEventListener('click', () => window.location.replace('details/3'))
+            </script>
+        </body>
+</body>
+</html>

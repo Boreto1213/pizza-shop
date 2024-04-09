@@ -1,0 +1,133 @@
+* {
+    font-family: 'Oswald', sans-serif;
+}
+
+.wrapper {
+    position: fixed;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 64px;
+    width: 100%;
+
+    box-shadow: rgb(0 0 0 / 30%) 0px 3px 5px 0px;
+}
+
+.logo {
+    width: 64px;
+    height: 64px;
+}
+
+.cart-btn {
+    width: 40px;
+    height: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.MainName {
+    font-size: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+
+    width: 100%;
+    height: 100%;
+
+    padding-top: 20px;
+}
+
+.left-side {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    padding: 20px;
+
+    width: 650px;
+    height: 555px;
+
+    background-color: lightgray;
+}
+
+.right-side {
+    padding: 20px;
+
+    width: 650px;
+    height: 555px;
+
+    background-color: lightgray;
+}
+
+.order-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    background-color: white;
+    width: 135px;
+    height: 70px;
+    border-radius: 10px;
+}
+
+.left-side>* {
+    flex: 0 0 32%;
+}
+
+.id {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+}
+
+.new-order-btn {
+    margin-right: 20px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+}
+
+button{
+    background-color: white; /* Green */
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 2px solid black;
+    font-family: 'Oswald', sans-serif;
+}
+
+button:hover {
+    background-color: black; /* Green */
+    color: white;
+  }

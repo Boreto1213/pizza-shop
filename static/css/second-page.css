@@ -1,0 +1,144 @@
+*{
+  font-family: 'Dancing Script', cursive;
+  font-family: 'Oswald', sans-serif;
+  
+}
+header {
+    background-color: white;
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    box-shadow: rgb(0 0 0 / 30%) 0px 3px 5px 0px;
+}
+body{
+  background-image: url('../images/pizza-background.jpg');
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 300px;
+    height: 500px;
+    margin: 10px;
+    text-align: center;
+    font-family: arial;
+    position: relative;
+    top: 80px;
+    font-size: 150%;
+    background-color: white;
+    padding: 10px;
+    opacity: 90%;
+  }
+
+.button {
+    background-color:#32ed93;
+    font-family: Courier New;
+    font-size:250%;
+    display: block;
+    width: 200px;
+    margin: auto;
+    text-align: center;
+    border-style: groove;
+    position: relative;
+    left: 44%;
+    
+}
+.logo {
+    background-color: white;
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    box-shadow: rgb(0 0 0 / 30%) 0px 3px 5px 0px;
+}
+
+.MainName {
+    position: absolute;
+    left: 65px;
+    top: 18px;
+    font-size: larger;
+    /* font-family: 'Dancing Script', cursive; */
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+}
+.pizza{
+    width:100%;
+}
+.button {
+    background-color: black; 
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    position: relative;
+    top: 80px;
+  }
+  button:hover {
+    background-color: black; /* Green */
+    color: white;}
+  
+  .button1 {
+    background-color: black; 
+    color: white; 
+    font-family: 'Oswald', sans-serif;
+    font-size: large;
+  }
+  
+  .button1:hover {
+    background-color: white;
+    color: black;
+  }
+  #rcorners1 {
+    border-radius: 5px;
+    
+    padding: 20px; 
+    width: 200px;
+    
+  }
+  .price {
+    color: grey;
+    font-size: 22px;
+  }
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .card button:hover {
+    opacity: 0.7;
+  }
+
+  .cart-btn {
+    width: 40px;
+    height: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+    z-index: 100;
+    position: fixed;
+    right: 10px;
+    top: 16px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.btn2 {
+  margin-top: 24px;
+}

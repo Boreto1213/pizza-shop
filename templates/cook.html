@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="3">
+    <link rel="stylesheet" href="../static/css/cook.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="top-bar">
+            <div class="left">
+                <img class="logo" src="../static/images/logo.png" alt="where's mr pizza" height="60" width="60">
+                <div class="MainName">Mario & Luigi Pizza</div>
+            </div>
+            <div class="empty"></div>
+        </div>
+
+        <div class="container">
+            {% for order in all_orders%}
+            
+            {% if order['status'].lower() != 'done' %}
+
+            <div class="box">
+                <h3>Order ID: {{ order['order_number']}}</h3>
+                <ul>
+                    {% for item in order['cart'] %}
+
+                    {% if item.get('size') %}
+                    <li>{{ item['name'] }} {{ '- ' + item['size'] if item.get('size') else '' }}</li>
+                    {% endif %}
+
+                    {% endfor %}
+                </ul>
+                <hr>
+                <div class="bottom">
+                    <button>{{ order['status'] }}</button>
+                    
+                </div>
+            </div>
+
+            {% endif %}
+
+            {% endfor %}
+
+        </div>
+    </div>
+</body>
+</html>

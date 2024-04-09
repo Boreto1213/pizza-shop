@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+body{
+    background-image: url('../images/pizza-background.jpg');
+  }
+.content{ 
+    width: 400px;
+    height: 700px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) ; background: #fff; border-radius: 10px;
+    padding: 30px;
+    color: #3e3e3e; 
+    margin-top: 60px; 
+    background-color: rgb(251, 251, 251);
+    
+}
+.button1{
+    position: absolute;
+    bottom: 10%;
+    left: 45%;
+}
+.button1:hover {
+    background-color: white; /* Green */
+    color: black;}
+.button2 {
+    position: absolute;
+    bottom: 10%;
+    left: 42%;
+}
+.button2:hover {
+    background-color: white; /* Green */
+    color: black;}
+
+button{
+    background-color: black;
+    font-family: Verdana;
+    color: white;
+    padding: 14px 40px;
+    border-radius: 8px;
+}
+
+.gif{
+    position: absolute;
+    bottom: 25%;
+    left: 37.5%;
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+
+    height: 64px;
+    width: 100%;
+
+    box-shadow: rgb(0 0 0 / 30%) 0px 3px 5px 0px;
+}
+
+.logo {
+    width: 64px;
+    height: 64px;
+}
+.top-bar{
+    background-color: white;
+}

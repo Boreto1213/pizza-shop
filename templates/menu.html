@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/menu.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Menu</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="top-bar">
+            <div class="left">
+                <img class="logo" src="../static/images/logo.png" alt="where's mr pizza" height="60" width="60">
+                <div class="MainName">Mario & Luigi Pizza</div>
+            </div>
+            <img class="cart-btn" src="../static/images/cart-icon.png" alt="where's the cart?" height="30px" width="30px">
+        </div>
+    
+        <div>
+            <button class="pizza btn">Pizza</button>
+            <button class="drinks btn">Drinks</button>
+            <button class="desserts btn">Desserts</button>
+        </div>
+
+    
+        <div class="menu">
+
+            {% for item in items %}
+            
+            <div class="tile" id="{{ item['id'] }}">
+                <img src="{{ item['img'] }}" alt="No img found!">
+                <div class="title">{{ item['name'] }}</div>
+                {% if item.get('price') %}
+                <h4>${{ item['price'] }}</h4>
+                {% else %}
+                <h4>${{ item['medium_price'] }}</h4>
+                {% endif %}
+            </div>
+
+            {% endfor %}
+        </div>
+    </div>
+    <script>
+        let pizzaBtn = document.querySelector('.pizza')
+        let drinksBtn = document.querySelector('.drinks')
+        let dessertsBtn = document.querySelector('.desserts')
+        let cartBtn = document.querySelector('.cart-btn')
+        let tiles = document.querySelectorAll('.tile')
+
+        pizzaBtn.addEventListener('click', () => window.location.replace('/select-items/pizzas'))
+        dessertsBtn.addEventListener('click', () => window.location.replace('/select-items/desserts'))
+        drinksBtn.addEventListener('click', () => window.location.replace('/select-items/drinks'))
+        cartBtn.addEventListener('click', () => window.location.replace('/cart'))
+        Array.from(tiles).map(tile => tile.addEventListener('click', () => window.location.replace('/details/' + tile.id)))
+    </script>
+</body>
+</html>

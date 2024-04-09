@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>M&L Pizzeria</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+        <link href="../static/css/front-page.css" type="text/css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Oswald&display=swap" rel="stylesheet">
+        <link rel="icon" href="../static/images/logo.png" type = "image/x-icon">
+        <div class="mainbackground"><img src="../static/images/pizza-background.jpg" width="100%" height="100%" alt="hey there's supposed to be a pizza here!" ps></div>
+        <body>
+            <div class="logo"><img src="../static/images/logo.png" alt="where's mr pizza" height="60" width="60"></div>
+            <div class="MainName">Mario & Luigi Pizza</div>
+            
+            <div class="parallelogram">
+                <button type="button">Eat in</button>
+                <button type="button">Take out</button>
+            </div>
+
+            <div class="quote"><p>Pizza is one of the most popular foods in the <br>world, and for good reason! It’s affordable, <br> delicious, and there’s an option for everyone.</div>
+            <div class="carticon"><a href="/cart"><img class="cart-btn" src="../static/images/cart-icon.png" alt="where's the cart?" height="30" width="30"></a></div>
+
+            <script>
+                let btn1 = document.querySelector('.parallelogram');
+                let btn2 = document.querySelector('.parallelogram2');
+
+                console.log(btn1)
+                console.log(btn2)
+
+
+                btn1.addEventListener('click', () => window.location.replace('/select-order-type/eat-in'))
+                btn2.addEventListener('click', () => window.location.replace('/select-order-type/take-out'))
+            </script>
+        </body>
+    </head>
+</html>

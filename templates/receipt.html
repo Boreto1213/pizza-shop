@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../static/css/reciept.css">
+        <title>Receipt</title>
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Oswald&display=swap" rel="stylesheet">
+    </head>
+        
+        <body>
+            <div class="top-bar">
+                <img class="logo" src="../static/images/logo.png" alt="where's mr pizza" height="60" width="60">
+                <div class="MainName">Mario & Luigi Pizza</div>
+            </div>
+            <div class="content">
+                <h1>Thank you for your purchase</h1>    
+                
+                <h2>your order ID is:<br>
+                    #{{ order_number }}<br>
+                </h2>
+                </div>
+            <div class="gif">
+                <img src="../static/images/cooking.gif" alt="prep" height="40%" width="40%">
+            </div>
+            
+            <button class="button1" type="button">Order again</button>
+        
+                <script>
+                    let orderAgainBtn = document.querySelector('.button1');
+
+                    orderAgainBtn.addEventListener('click', () => window.location.replace('/'));
+                </script>
+        </body>
+</html>

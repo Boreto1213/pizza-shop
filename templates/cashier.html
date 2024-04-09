@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="refresh" content="10">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/cashier.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="top-bar">
+            <div class="left">
+                <img class="logo" src="../static/images/logo.png" alt="where's mr pizza" height="60" width="60">
+                <div class="MainName">Mario & Luigi Pizza</div>
+            </div>
+            <button class="new-order-btn">Create new order</button>
+
+
+        </div>
+
+        <div class="container">
+            <div class="left-side">
+            {% for order in all_orders %}
+                <div class="order-container" id="{{ order['order_number'] }}">
+                    <div class="id">{{ order['order_number'] }}</div>
+                    <div class="data">
+                        <p>Total: ${{ order['total_price'] }}</p>
+                        <p>Staus: {{ order['status'] }}</p>
+                    </div>
+                </div>
+            
+            {% endfor %}
+            </div>
+
+            <div class="right-side">
+                {% if selected_order %}
+                <h1>Order ID: {{ selected_order['order_number'] }}</h1>
+
+                {% for item in selected_order['cart'] %}
+                <div class="row">
+                    <h3>{{ item['name'] }}</h3> <h3>${{ item['price'] }}</h3>
+                </div>
+                {% endfor %}
+
+                <hr>
+                <div class="total">
+                    <h2>Status: {{ selected_order['status'] }} </h2>
+                    <h2>Total: ${{ selected_order['total_price'] }} </h2>
+                    <h2>Type: {{ selected_order['type'] }} </h2>
+                </div>
+
+                <!-- <button class="pay-btn" id="{{ selected_order['order_number'] }}">Pay for order</button> -->
+                <button class="cancel-btn" id="{{ selected_order['order_number'] }}">Cancel order</button>
+                {% else %}
+
+                {% endif%}
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let orderContainers = document.querySelectorAll('.order-container');
+        let cancelBtn = document.querySelector('.cancel-btn');
+        let newOrderBtn = document.querySelector('.new-order-btn');
+
+        newOrderBtn.addEventListener('click', () => window.location.replace('/menu'));
+        Array.from(orderContainers).map(el => el.addEventListener('click', () => window.location.replace('/cashier-select-order/' + el.id)));
+        cancelBtn.addEventListener('click', () => window.location.replace('cancel-order/' + cancelBtn.id));
+    </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Oswald', sans-serif;
+        
+   
+}
+body{
+    background-image: url('../images/pizza-background.jpg');
+}
+.MainName {
+    position: absolute;
+    left: 65px;
+    top: 18px;
+    font-size: larger;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Oswald', sans-serif;
+}
+.container{ 
+    width: 400px;
+    height: 600px;
+    margin-top: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) ; background: #fff; border-radius: 10px;
+    padding: 10px;
+    padding: 30px;
+    color: #3e3e3e;
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.25);
+}
+.checkboxes{
+    position: absolute;
+    bottom: 70px;
+    font-size: 120%;
+    font-family: sans-serif;
+    border-radius: 8px;
+    padding: 10px 24px;
+    left: 10px;
+    right: 10px;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Oswald', sans-serif;
+}
+.checkboxes input{
+    margin: 10px ;
+  }
+.details{
+    position: absolute;
+    border-radius: 8px;
+    padding: 10px 24px;
+    left: 10px;
+    right: 10px;
+    
+    color: black;
+    font-size: 100%;
+    
+    font-family: sans-serif;
+   
+}
+button{
+    background-color: white; /* Green */
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 2px solid black;
+    transition-duration: 0.4s;
+    font-family: Verdana;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Oswald', sans-serif;
+}
+button:hover {
+    background-color: black; /* Green */
+    color: white;
+  }
+.button1{
+    position: absolute;
+    
+    left: 32%;
+    bottom: 3%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 64px;
+    width: 100%;
+
+    box-shadow: rgb(0 0 0 / 30%) 0px 3px 5px 0px;
+    background-color: white;
+}
+
+.logo {
+    width: 64px;
+    height: 64px;
+}
+
+.cart-btn {
+    width: 40px;
+    height: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.cancel-btn {
+    cursor: pointer;
+}
